@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 # Author: Zhang Huangbin <zhb@iredmail.org>
-# Purpose: Query SPF DNS record of specified domains and generate SQL
-#          file which is used to insert IP addresses of SPF records as
-#          whitelisted greylisting senders.
+# Purpose: Query SPF DNS record of specified domains and print converted IP
+#          addresses and networks.
 
 #
 # USAGE
@@ -33,19 +32,15 @@
 #
 #   * not supported spf syntax:
 #
-#       - a/24 a:offsite.example.com/24
-#       - mx/24 mx:offsite.example.com/24
+#       - ptr ptr:<domain>
+#       - a/24 a:<domain>/24
+#       - mx/24 mx:<domain>/24
 #       - exists:<domain>
 
 #
 # REFERENCES
 #
 #   * SPF Record Syntax: http://www.openspf.org/SPF_Record_Syntax
-
-#
-# TODO
-#
-#   - support spf syntax: ptr ptr:<domain>
 
 # Specify your preferred DNS server. A local DNS server is better.
 # 8.8.8.8 and 8.8.4.4 are Google DNS servers.
