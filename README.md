@@ -17,12 +17,6 @@ For example:
 $ bash spf_to_ip.sh google.com aol.com
 ```
 
-Or read from a file which contains list of mail domain names.
-
-```
-$ bash spf_to_ip.sh $(cat isps)
-```
-
 it will print all IP addresses converted from spf record.
 
 ## Required commands:
@@ -45,7 +39,7 @@ it will print all IP addresses converted from spf record.
 
 ## REFERENCES
 
-* [SPF Record Syntax](http://www.openspf.org/SPF_Record_Syntax)
+* [SPF Record Syntax](http://www.open-spf.org/SPF_Record_Syntax)
 
 ## TODO
 
